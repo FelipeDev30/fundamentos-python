@@ -48,3 +48,21 @@ Aqui estão alguns dos métodos mais comuns e úteis da classe string em Python:
 Esses métodos são apenas uma amostra das muitas funcionalidades que a classe string oferece em Python. Eles facilitam a manipulação de texto e tornam o código mais legível e eficiente.
 
 """
+""" 
+nome = "Felipe Lamas"
+
+print(nome.lower())
+print(nome.upper())
+print(nome.strip())
+print(nome.replace("Lamas", "Silva"))
+print(nome.split())
+print('-'.join(nome))
+print(nome.find("Lamas"))
+print(nome.count("a"))
+print(nome.title())
+print(nome.capitalize())
+print(nome.startswith("F"))
+print(nome.endswith("s"))
+print(nome.isalpha()) 
+
+"""
