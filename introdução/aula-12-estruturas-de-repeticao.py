@@ -15,7 +15,7 @@ Exemplo de uso do for loop para repetir uma ação 5 vezes:
 for i in range(5):
     print("Repetição número:", i)
 
-"""
+"""  
 
 for i in range(0, 51, 5):
     print("Tabulada de 5 contagem:", i)
@@ -23,17 +23,35 @@ for i in range(0, 51, 5):
 print()
 
 texto = input("Digite um texto: ")
-VOGAIS = "aeiouAEIOU"
+VOGAIS = "AEIOU"
 
 for letra in texto:
-    if letra in VOGAIS:
+    if letra.upper in VOGAIS:
         print(letra, end=" ")
 else:
     print("\nFim do programa.")
 
 print()
 
-# Exemplo de uso do while loop para criar um menu interativo
+"""
+
+O que é um loop while?
+
+O loop while é uma estrutura de controle de fluxo que permite repetir um bloco de código enquanto uma condição específica for verdadeira. Ele é útil quando não sabemos de antemão quantas vezes o bloco de código precisa ser executado.
+Sintaxe básica do while loop:
+
+while condição:
+    # bloco de código a ser repetido
+    ação()
+
+Exemplo de uso do while loop para repetir uma ação enquanto uma condição for verdadeira:
+
+contador = 0
+while contador < 5:
+    print("Contador:", contador)
+    contador += 1
+
+"""
 opcao = -1
 
 while opcao != 0:
@@ -49,5 +67,3 @@ while opcao != 0:
         else:
             print("Opção inválida, tente novamente.")
 print("Fim do programa.")
-
-

@@ -1,3 +1,19 @@
+""" 
+Operadores de comparação são utilizados para comparar dois valores e retornar um resultado booleano (True ou False).
+Exemplos de operadores de comparação:
+
+- Igual a: ==
+- Diferente de: !=
+- Maior que: >
+- Menor que: <
+- Maior ou igual a: >=
+- Menor ou igual a: <=
+
+Esses operadores são fundamentais para a tomada de decisões em programas, permitindo que o código execute diferentes blocos de acordo com as condições estabelecidas.
+Exemplo de uso dos operadores de comparação:
+
+"""
+
 n1 = float(input("Digite a primeira nota: "))
 n2 = float(input("Digite a segunda nota: "))
 n3 = float(input("Digite a terceira nota: "))

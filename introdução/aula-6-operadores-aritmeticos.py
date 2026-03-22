@@ -1,5 +1,27 @@
 def calculadora(n1, n2):
-    """Retorna um dicionário com várias operações matemáticas entre dois números."""
+    """
+    Retorna um dicionário com várias operações matemáticas entre dois números.
+    
+    :param n1: Primeiro número
+    :param n2: Segundo número
+    :return: Dicionário com os resultados das operações
+    
+    Operações incluídas:
+    - Soma: n1 + n2
+    - Subtração: n1 - n2
+    - Multiplicação: n1 * n2
+    - Divisão inteira: n1 // n2 (retorna None se n2 for zero)
+    - Divisão: n1 / n2 (retorna None se n2 for zero
+    - Módulo: n1 % n2 (retorna None se n2 for zero)
+    - Exponenciação: n1 ** n2
+
+    Ordem de precedência:
+    1. Parênteses
+    2. Exponenciação
+    3. Multiplicação, Divisão, Divisão inteira, Módulo (da esquerda para a direita)
+    4. Adição, Subtração (da esquerda para a direita)
+
+    """
     # Tratamento de divisão por zero
     if n2 == 0:
         div_inteira = None
