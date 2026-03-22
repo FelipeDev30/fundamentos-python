@@ -43,7 +43,7 @@ Sintaxe básica do while loop:
 while condição:
     # bloco de código a ser repetido
     ação()
-
+    
 Exemplo de uso do while loop para repetir uma ação enquanto uma condição for verdadeira:
 
 contador = 0
