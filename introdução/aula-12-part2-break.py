@@ -1,7 +1,7 @@
-""" 
+"""
 O que é o break?
 
-O break é uma palavra-chave em Python que é usada para interromper a execução de um loop (for ou while) antes que ele tenha percorrido toda a sequência ou antes que a condição do loop seja falsa. 
+O break é uma palavra-chave em Python que é usada para interromper a execução de um loop (for ou while) antes que ele tenha percorrido toda a sequência ou antes que a condição do loop seja falsa.
 Quando o break é executado, o controle do programa é transferido para a primeira linha de código após o bloco do loop.
 
 Sintaxe do break:
@@ -30,7 +30,7 @@ while True:
     contador += 1
     if contador >= 5:
         break
-        
+
 Neste exemplo, o loop while irá imprimir os valores do contador de 0 a 4. Quando o contador atingir 5, o break será executado, e o loop será interrompido, não imprimindo mais valores.
 
 
@@ -45,4 +45,4 @@ while True:
         print("Você digitou:", numero)
         break
     else:
-        print("Você digitou:", numero) 
+        print("Você digitou:", numero)
