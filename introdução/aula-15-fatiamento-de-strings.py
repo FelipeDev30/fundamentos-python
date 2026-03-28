@@ -39,3 +39,12 @@ print(parte5)
 O fatiamento de strings é uma ferramenta poderosa em Python que permite manipular e extrair partes específicas de strings de maneira eficiente e flexível.
 
 """
+
+nome = "Felipe Lamas da Silva"
+
+print(nome[0]) # Extrai o primeiro caractere
+print(nome[:12]) # Extrai os primeiros 12 caracteres
+print(nome[13:]) # Extrai a partir do índice 13 
+print(nome[13:16]) # Extrai do índice 13 até o índice 16
+print(nome[:]) # Extrai todos os caracteres
+print(nome[::-1]) # Extrai os caracteres em ordem reversa

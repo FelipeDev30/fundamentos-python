@@ -28,4 +28,4 @@ print(mensagem2)
 
 # Usando f-strings
 mensagem3 = f"Olá, {dados['nome']}! Você tem {dados['idade']} anos, trabalha como {dados['profissao']} e gosta de programar em {dados['linguagem']}."
-print(mensagem3) 
+print(mensagem3)  
