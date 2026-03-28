@@ -58,16 +58,25 @@ print("Último:", ultimo_elemento)
 
 ***
 
-Quer que eu também **explique operações comuns com listas** (como adicionar, remover, ordenar, percorrer) e **crie um mini-guia com exemplos práticos**?  
-Posso até gerar um **PDF bem formatado** com esse conteúdo para você usar como material de estudo ou compartilhar. Quer que eu faça isso?
-
 """
+frutas = ["laranja", "maca", "banana", "uva"]
 
-frutas = ['maçã', 'banana', 'cereja', 'damasco']
-print(frutas[0])  # Output: maçã
-print(frutas[2])  # Output: cereja
+frutas = []
 
-numeros = list(range(1, 6))  # Cria uma lista [1, 2, 3, 4, 5]
-print(numeros[4])  # Output: 5
-print(numeros[-1]) # Output: 5
-print(numeros[-3]) # Output: 3
+letras = list("python")
+
+numeros = list(range(1, 11))
+
+carro = ["fusca", 1970, "azul", 4]
+
+tabela = [
+    ["Nome", "Idade", "Cidade"],
+    ["Alice", 30, "São Paulo"],
+    ["Bob", 25, "Rio de Janeiro"],
+    ["Charlie", 35, "Belo Horizonte"]
+]
+
+print(tabela[0][0])  # "Nome"
+print(tabela[1][0])  # "Alice"
+print(tabela[2][0])  # "Bob"
+print(tabela[3][0])  # "Charlie"
