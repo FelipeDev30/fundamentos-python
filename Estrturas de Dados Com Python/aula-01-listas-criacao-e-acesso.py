@@ -59,24 +59,3 @@ print("Último:", ultimo_elemento)
 ***
 
 """
-frutas = ["laranja", "maca", "banana", "uva"]
-
-frutas = []
-
-letras = list("python")
-
-numeros = list(range(1, 11))
-
-carro = ["fusca", 1970, "azul", 4]
-
-tabela = [
-    ["Nome", "Idade", "Cidade"],
-    ["Alice", 30, "São Paulo"],
-    ["Bob", 25, "Rio de Janeiro"],
-    ["Charlie", 35, "Belo Horizonte"]
-]
-
-print(tabela[0][0])  # "Nome"
-print(tabela[1][0])  # "Alice"
-print(tabela[2][0])  # "Bob"
-print(tabela[3][0])  # "Charlie"

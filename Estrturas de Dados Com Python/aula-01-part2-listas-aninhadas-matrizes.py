@@ -22,3 +22,16 @@ elemento_3 = matriz[2][1]  # 8
 print("Elemento [0][0]:", elemento_1)  # Output: 1
 print("Elemento [1][2]:", elemento_2)  # Output: 6
 print("Elemento [2][1]:", elemento_3)  # Output: 8
+
+
+tabela = [
+    ["Nome", "Idade", "Cidade"],
+    ["Alice", 30, "São Paulo"],
+    ["Bob", 25, "Rio de Janeiro"],
+    ["Charlie", 35, "Belo Horizonte"]
+]
+
+print(tabela[0][0])  # "Nome"
+print(tabela[1][0])  # "Alice"
+print(tabela[2][0])  # "Bob"
+print(tabela[3][0])  # "Charlie"
