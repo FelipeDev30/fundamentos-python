@@ -78,7 +78,7 @@ print('Curso (setdefault):', curso)
 ultimo = aluno.popitem()
 print('Item removido por popitem:', ultimo)
 
-# Verifica existência de chave com in (O(1))
+# Verifica existência de chave
 resultado = "notas" in aluno
 print('Notas presentes no dicionário?', resultado)
 
@@ -92,5 +92,3 @@ a_prestado = aluno.copy()
 a_prestado.clear()
 print('Dicionário original:', aluno)
 print('Cópia esvaziada:', a_prestado)
-
-
