@@ -28,5 +28,3 @@ criar_carros(modelo="Civic", ano=2020, placa="ABC-1234", marca="Honda", motor="2
 criar_carros("Civic", 2020, "ABC-1234", "Honda", "2.0", "Gasolina") # Inválido 
 
 """
-
-
