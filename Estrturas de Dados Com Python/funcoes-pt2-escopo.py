@@ -7,7 +7,7 @@
 """
 # Exemplo de escopo global
 
-salario = 2000
+salario = 2000 # Variável global
 
 def salario_bonus(bonus):
     global salario
