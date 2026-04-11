@@ -141,6 +141,7 @@ def vender_bicicleta(estoque, total_vendas):
         if 0 <= indice < len(estoque):
             bike = estoque.pop(indice)
             lançar_venda(bike)
+            bike.valor = bike.valor + (bike.valor * 0.3)  # Adiciona 30% ao valor da bicicleta
             total_vendas += bike.valor
             print(f"Valor adicionado às vendas: R$ {bike.valor:.2f}")
         else:
