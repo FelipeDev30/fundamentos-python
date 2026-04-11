@@ -55,3 +55,24 @@ print(cachorro1.dormir())  # Saída: Rex agora está dormindo.
 print(cachorro1.latir())  # Saída: Rex está dormindo e não pode latir.
 print(cachorro1.acordar())  # Saída: Rex agora está acordado.
 print(cachorro1.latir())  # Saída: Rex está latindo!
+
+class Bicicleta: 
+    def __init__(self, cor, modelo, ano, valor):
+        self.cor = cor
+        self.modelo = modelo
+        self.ano = ano
+        self.valor = valor
+    def buzinar(self):
+        print("Buzinando: Biiiiiiiiiip!")
+    def parar(self):
+        print("Parando a bicicleta...")
+        print("A bicicleta parou!")
+    def correr(self):
+        print("A bicicleta está correndo pela estrada!")
+        
+    def __str__(self):
+        return f"{self.__class__.__name__} : `{', '.join([f'{key}={value}' for key, value in self.__dict__.items()])}"
+
+b1 = Bicicleta("Vermelha", "Mountain Bike", 2020, 1500.00)
+print("--- Exemplo com a classe Bicicleta ---\n")
+print(b1)
