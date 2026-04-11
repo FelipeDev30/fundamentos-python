@@ -21,5 +21,37 @@ class Pessoa:
 pessoa1 = Pessoa("Alice", 30)
 pessoa2 = Pessoa("Bob", 25)
 # Usando o método apresentar para cada objeto
+print("\n--- Exemplo com a classe Pessoa ---\n")
 print(pessoa1.apresentar())  # Saída: Olá, meu nome é Alice e tenho 30 anos.
 print(pessoa2.apresentar())  # Saída: Olá, meu nome é Bob e tenho 25 anos.
+
+print("\n--- Exemplo com a classe Cachorro ---\n")
+
+class Cachoroo:
+    def __init__(self, nome, cor, acordado):
+        self.nome = nome
+        self.cor = cor
+        self.acordado = acordado
+    
+    def latir(self):
+        if self.acordado:
+            return f"{self.nome} está latindo!"
+        else:
+            return f"{self.nome} está dormindo e não pode latir."
+    
+    def dormir(self):
+        self.acordado = False
+        return f"{self.nome} agora está dormindo."
+    
+    def acordar(self):
+        self.acordado = True
+        return f"{self.nome} agora está acordado."
+    
+# Criando um objeto da classe Cachorro
+cachorro1 = Cachoroo("Rex", "Marrom", True)
+# Usando os métodos do objeto cachorro1
+print(cachorro1.latir())  # Saída: Rex está latindo!
+print(cachorro1.dormir())  # Saída: Rex agora está dormindo.
+print(cachorro1.latir())  # Saída: Rex está dormindo e não pode latir.
+print(cachorro1.acordar())  # Saída: Rex agora está acordado.
+print(cachorro1.latir())  # Saída: Rex está latindo!
