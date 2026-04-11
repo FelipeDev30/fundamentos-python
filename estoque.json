@@ -1,0 +1,14 @@
+[
+    {
+        "cor": "Vermelha",
+        "modelo": "Montain Bike",
+        "ano": 2025,
+        "valor": 1500.0
+    },
+    {
+        "cor": "Verde",
+        "modelo": "Caloi",
+        "ano": 2020,
+        "valor": 700.0
+    }
+]
