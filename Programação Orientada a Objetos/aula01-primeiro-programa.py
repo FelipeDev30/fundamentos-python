@@ -4,6 +4,51 @@
     João tem uma bicicletaria e gostaria de registrar as vendas de suas bicicletas. Crie um programa onde João informe: cor, modelo, ano e valor da bicicleta vendida.
     Uma bicicleta pode: buzinar, parar e correr. Adicione esses comportamentos!
 
+1. Definição da Estrutura de Dados (A Classe)
+O coração do programa é a classe Bicicleta. Ela serve como um "molde" para criar objetos que representam bicicletas reais no sistema
+.
+Atributos: No método __init__, definimos as características de cada bicicleta: cor, modelo, ano e valor
+.
+Comportamentos: Embora a definição completa dos métodos não apareça no texto, o código utiliza métodos como buzinar(), correr(), parar() e exibir_informacoes() para interagir com o objeto
+.
+2. Gerenciamento de Persistência (Salvando e Lendo Arquivos)
+Para evitar que os dados se percam ao fechar o programa, o código utiliza a biblioteca json
+.
+Salvando: A função salvar_estoque percorre a lista de bicicletas, converte cada objeto em um dicionário (via to_dict()) e grava no arquivo "estoque.json" com indentação para facilitar a leitura
+.
+Carregando: A função carregar_estoque verifica se o arquivo existe usando os.path.exists
+. Se existir, ele lê o arquivo e reconstrói os objetos Bicicleta a partir dos dados salvos usando um método de fábrica (from_dict)
+.
+3. Entrada de Dados e Criação de Objetos
+A função comprar_bicicleta (que no contexto do sistema significa "adicionar ao estoque") gerencia a interação com o usuário
+.
+Validação: O código utiliza um bloco try-except para capturar erros de entrada (como digitar letras onde deveriam ser números no ano ou valor), evitando que o programa trave
+.
+Instanciação: Após coletar cor, modelo, ano e valor, ele cria uma nova instância da classe Bicicleta e a retorna
+.
+4. Lógica de Vendas e Manipulação de Listas
+O sistema trata o estoque como uma lista de objetos
+.
+Venda: Na função vender_bicicleta, o programa exibe o estoque e pede ao usuário o índice (número) da bicicleta
+.
+Remoção: Se o índice for válido, o método estoque.pop(indice) é usado para remover a bicicleta da lista de estoque e o valor dela é somado ao total_vendas
+.
+Registro: A função lançar_venda apenas exibe uma confirmação visual de que a venda foi processada com sucesso
+.
+5. Visualização e Relatórios
+Existem funções dedicadas a mostrar o estado atual do sistema:
+Exibir Estoque: Percorre a lista, mostra as informações de cada bicicleta e calcula o valor total em estoque acumulando o atributo bike.valor em uma variável
+.
+Exibir Comportamentos: Demonstra a funcionalidade do objeto chamando seus métodos internos
+.
+6. O Fluxo Principal (Loop de Execução)
+Toda a lógica é orquestrada pela função main() e o bloco if __name__ == "__main__":
+.
+Menu Interativo: Um loop while True mantém o programa rodando, apresentando seis opções ao usuário (comprar, vender, exibir estoque, etc.)
+.
+Persistência Automática: Ao iniciar, o estoque é carregado do arquivo
+. (Nota: Para um estudo completo, seria ideal que o salvar_estoque fosse chamado após cada alteração no estoque, embora essa chamada específica não apareça no trecho final do menu fornecido).
+
 """
 import json
 import os
