@@ -2,7 +2,6 @@
 # O que é herança?
 
 - Herança é um dos pilares da programação orientada a objetos (POO) que permite criar novas classes com base em classes existentes. 
-
 A classe existente é chamada de "classe base" ou "superclasse", enquanto a nova classe é chamada de "classe derivada" ou "subclasse". 
 A subclasse herda os atributos e métodos da superclasse, permitindo reutilizar código e criar hierarquias de classes.
 
