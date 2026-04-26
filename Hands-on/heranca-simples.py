@@ -12,7 +12,7 @@ class Veiculo:
             print("O motor está desligado.")
     
     def __str__(self):
-        return f"Veículo: {self.cor}, Placa: {self.placa}, Rodas: {self.numero_rodas}"
+        return f"{self.__class__.__name__}: {', '.join([f'{chave}={valor}' for chave, valor in self.__dict__.items()])}"
 
 class Carro(Veiculo):
     def __init__(self, cor, placa, numero_rodas):
@@ -31,14 +31,14 @@ class Caminhao(Veiculo):
         print(f"{'Sim' if self.carregado else 'Não'}, está carregado.")
 
 moto = Motocicleta("vermelha", "ABC-1234", 2)
-print(f"moto: {moto}\n")
-moto.ligar_e_desligar_motor()
+print(f" {moto}\n")
+
 
 carro = Carro("azul", "XYZ-5678", 4)
-print(f"carro: {carro}\n")
-carro.ligar_e_desligar_motor()
+print(f" {carro}\n")
+
 
 caminhao = Caminhao("preto", "DEF-9012", 6, True)
-print(f"caminhao: {caminhao}\n")
-caminhao.ligar_e_desligar_motor()
+print(f" {caminhao}\n")
+
 caminhao.esta_carregado()
