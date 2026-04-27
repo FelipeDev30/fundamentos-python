@@ -4,6 +4,11 @@ O que é herança múltipla?
 Herança múltipla é um conceito em programação orientada a objetos onde uma classe pode herdar características e comportamentos de mais de uma classe base. 
 Isso permite que uma classe derive funcionalidades de várias classes, promovendo a reutilização de código e a flexibilidade na modelagem de objetos.
 
+O que são mixins?
+Mixins são um tipo especial de classe que é projetada para fornecer funcionalidades adicionais a outras classes, sem a intenção de ser instanciada por si mesma. 
+Eles são usados para adicionar comportamentos específicos a uma classe sem a necessidade de criar uma hierarquia complexa de classes.
+Mixins são frequentemente usados em conjunto com herança múltipla para fornecer funcionalidades específicas a uma classe sem a necessidade de criar uma hierarquia complexa de classes.
+
 Exemplo de herança múltipla em Python:
 
 """
