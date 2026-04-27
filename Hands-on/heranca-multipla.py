@@ -24,8 +24,12 @@ class Ave(Animal):
         super().__init__(**kwargs)
         self.cor_pena = cor_pena
         self.cor_bico = cor_bico
+        
+class FalarMixin:
+    def falar(self):
+        return "O animal está falando."
     
-class Ornitorrinco(Mamifero, Ave):
+class Ornitorrinco(Mamifero, Ave, FalarMixin):
     def __init__(self, cor_bico, cor_pelo, nro_patas, cor_pena):
         
         super().__init__(cor_pelo=cor_pelo, nro_patas=nro_patas, cor_pena=cor_pena, cor_bico=cor_bico)
@@ -33,4 +37,5 @@ class Ornitorrinco(Mamifero, Ave):
 
 ornitorrinco = Ornitorrinco(nro_patas=4, cor_pelo="marrom", cor_pena="cinza", cor_bico="preto")
 print(ornitorrinco)
+print(ornitorrinco.falar())
 print(Ornitorrinco.mro())
