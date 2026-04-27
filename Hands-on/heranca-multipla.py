@@ -26,7 +26,10 @@ class Ave(Animal):
         self.cor_bico = cor_bico
     
 class Ornitorrinco(Mamifero, Ave):
-    pass 
+    def __init__(self, cor_bico, cor_pelo, nro_patas, cor_pena):
+        print(Ornitorrinco.__mro__)
+        super().__init__(cor_pelo=cor_pelo, nro_patas=nro_patas, cor_pena=cor_pena, cor_bico=cor_bico)
+        pass
 
 ornitorrinco = Ornitorrinco(nro_patas=4, cor_pelo="marrom", cor_pena="cinza", cor_bico="preto")
 print(ornitorrinco)
