@@ -1,8 +1,8 @@
 """ 
 O que é herança múltipla?
 
-Herança múltipla é um conceito em programação orientada a objetos onde uma classe pode herdar características e comportamentos de mais de uma classe base. Isso permite que uma classe derive funcionalidades de várias classes, 
-promovendo a reutilização de código e a flexibilidade na modelagem de objetos.
+Herança múltipla é um conceito em programação orientada a objetos onde uma classe pode herdar características e comportamentos de mais de uma classe base. 
+Isso permite que uma classe derive funcionalidades de várias classes, promovendo a reutilização de código e a flexibilidade na modelagem de objetos.
 
 Exemplo de herança múltipla em Python:
 
@@ -29,4 +29,4 @@ class Ornitorrinco(Mamifero, Ave):
     pass 
 
 ornitorrinco = Ornitorrinco(nro_patas=4, cor_pelo="marrom", cor_pena="cinza", cor_bico="preto")
-print(ornitorrinco)   
+print(ornitorrinco)
