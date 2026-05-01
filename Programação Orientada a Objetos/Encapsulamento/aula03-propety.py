@@ -1,62 +1,57 @@
 """
 Encapsulamento - Aula 03 - Property
 
-O que é property?
+A função `property` transforma métodos em um atributo público.
+Isso permite controlar leitura, escrita e deleção de valores internos
+sem mudar a forma como o objeto é usado.
 
-Property é uma função decoradora (decorator) que tem a função de transformar métodos em atributos, ou seja, podemos acessar um método como se fosse um atributo, sem a necessidade de usar os parênteses.
-Isso é útil para criar atributos calculados, ou seja, atributos que são calculados a partir de outros atributos, sem a necessidade de criar um método para isso.
-
-Exemplo:
-
+Exemplo de uso:
+    pessoa.nome
+    pessoa.idade = 35
+    del pessoa.idade
 """
-""" class Foo:
-    def __init__(self, x=None):
-        self._x = x
-    
-    @property
-    def x(self):
-        return self._x or 0
-    
-    @x.setter
-    def x(self, value):
-        _x = self._x or 0
-        _value = value or 0
-        self._x = _x + _value
-    
-    @x.deleter
-    def x(self):
-        self._x = -1
-
-foo = Foo(10)
-print(foo.x) # 10
-foo.x = 5
-print(foo.x) # 15
-del foo.x
-print(foo.x) # -1  """
 
 class Pessoa:
     def __init__(self, nome, idade):
-        self._nome = nome
-        self._idade = idade
-    
+        # A convenção do underscore indica que os atributos são de uso interno.
+        nome = input("Digite o nome da pessoa: ")
+        idade = int(input("Digite a idade da pessoa: "))
+        self._nome = nome 
+        self._idade = idade 
+
     @property
     def nome(self):
+        """Nome público. Não há setter, então este atributo é somente leitura."""
         return self._nome
-    
+
     @property
     def idade(self):
+        """Idade pública. O valor é retornado a partir do atributo interno _idade."""
         return self._idade
-    
+
     @idade.setter
-    def idade(self, value):
-        if value < 0:
+    def idade(self, valor):
+        """Setter para idade com validação simples."""
+        if valor < 0:
             raise ValueError("Idade não pode ser negativa")
-        self._idade = value
-    
+        self._idade = valor
+
+    @idade.deleter
+    def idade(self):
+        """Deleter para idade. Mantemos o objeto consistente definindo idade como 0."""
+        self._idade = 0
+
     def saudacao(self):
+        """Método normal que usa as propriedades nome e idade."""
         return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
-    
-pessoa = Pessoa("João", 30)
-print(pessoa.nome) # João
-print(pessoa.idade) # 30
-print(pessoa.saudacao()) # Olá, meu nome é João e tenho 30 anos.
+
+
+if __name__ == "__main__":
+    pessoa = Pessoa(f"{Pessoa.nome}", Pessoa.idade) # O construtor agora solicita os valores de nome e idade.
+    print(pessoa.saudacao())  # Olá, meu nome é ? e tenho ? anos.
+
+    pessoa.idade = 35
+    print(pessoa.saudacao())  # Olá, meu nome é ? e tenho ? anos.
+
+    del pessoa.idade
+    print(pessoa.saudacao())  # Olá, meu nome é ? e tenho 0 anos.
