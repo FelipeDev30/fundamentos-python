@@ -1,5 +1,6 @@
 """ 
 O que é Polimorfismo?
+
 Polimorfismo é um conceito fundamental na programação orientada a objetos que permite que objetos de diferentes classes sejam tratados como objetos de uma classe comum. O termo "polimorfismo" vem do grego e significa "muitas formas". 
 Em outras palavras, o polimorfismo permite que uma única interface seja usada para representar diferentes tipos de objetos, e o comportamento específico do objeto é determinado em tempo de execução. Isso é alcançado por meio de métodos que podem ser redefinidos em subclasses, permitindo que cada classe tenha sua própria implementação do método, mesmo que compartilhem a mesma assinatura.
 O polimorfismo é frequentemente implementado por meio de herança e interfaces, onde uma classe base define um método que pode ser sobrescrito por classes derivadas. Isso permite que o código seja mais flexível e reutilizável, pois você pode usar a mesma interface para trabalhar com diferentes tipos de objetos sem se preocupar com suas implementações específicas.
