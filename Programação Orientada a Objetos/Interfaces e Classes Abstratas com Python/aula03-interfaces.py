@@ -50,9 +50,13 @@ class Notebook(Computacional):
         return "Não é possível processar dados - memória insuficiente"
 
     def ligar(self):
-        return "Ligando o notebook"
+        if self.processador and self.ram > 0:
+            return "Ligando o notebook"
+        return "Não é possível ligar o notebook"
 
     def desligar(self):
+        while self.processador and self.ram > 0:
+            self.ram -= 1
         return "Desligando o notebook"
 
 notebook = Notebook("Dell", "XPS 13", "Intel Core i7", 16)
