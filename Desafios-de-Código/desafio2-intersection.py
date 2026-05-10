@@ -29,21 +29,8 @@ a e i o u	Entrada inválida.
 ATENÇÃO
 
 As entradas e saídas dos desafios de código devem ser idênticas às definidas na descrição do desafio.
-
-
-
-salvo 16 minutos atrás
-TESTES
-Teste #1
-
-Teste #2
-
-Teste #3
-
-Teste #4
-
-Dúvidas ?
-
+O código deve ser escrito em Python e deve ser possível executá-lo sem erros. 
+Certifique-se de testar seu código com os exemplos fornecidos e com outros casos possíveis para garantir que ele funcione corretamente.
 """
 
 def elementos_comuns(lista1, lista2):

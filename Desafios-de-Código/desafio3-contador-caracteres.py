@@ -24,17 +24,9 @@ As entradas e saídas dos desafios de código devem ser idênticas às definidas
 
 print(resultado)
 
+O código deve ser escrito em Python e deve ser possível executá-lo sem erros. 
+Certifique-se de testar seu código com os exemplos fornecidos e com outros casos possíveis para garantir que ele funcione corretamente.
 
-TESTES
-Teste #1
-
-Teste #2
-
-Teste #3
-
-Teste #4
-
-Dúvidas ?
 
 """
 def contar_caracteres(string):
