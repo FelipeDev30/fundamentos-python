@@ -5,7 +5,7 @@ Por fim, crie instâncias de ambas as classes e chame os métodos para ligar e d
 
 """
 
-from abc import ABC, abstractmethod
+from abc import ABC, abstractmethod, abstractproperty
 
 
 class ControleRemeto(ABC):
@@ -18,10 +18,15 @@ class ControleRemeto(ABC):
         pass
     
     @property
+    @abstractproperty
     def status(self):
-        return 'Ligado' if self._ligado else 'Desligado'
+        pass
 
 class ControleTv(ControleRemeto):
+    @property
+    def status(self):
+        return 'Ligado' if self._ligado else 'Desligado'
+    
     def __init__(self):
         self._ligado = False
 
@@ -34,6 +39,10 @@ class ControleTv(ControleRemeto):
         
 
 class ControleArCondicionado(ControleRemeto):
+    @property
+    def status(self):
+        return 'Ligado' if self._ligado else 'Desligado'
+
     def __init__(self):
         self._ligado = False
 
@@ -47,13 +56,12 @@ class ControleArCondicionado(ControleRemeto):
 
 controle = ControleTv()
 
-
-print("\n" + "---" * 10 + "\n")
-
 control_ar = ControleArCondicionado()
 
 print(f"Status da TV: {controle.status}")
 print(f"Status do Ar Condicionado: {control_ar.status}")
+
+print("\n" + "---" * 10 + "\n")
 
 controle.ligar()
 control_ar.ligar()
