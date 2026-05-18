@@ -17,7 +17,6 @@ def incentivar_aprender(nome):
 def mensagem_para_pessoa(funcao_mensagem):
     return funcao_mensagem(nome)
 
-print(mensagem_para_pessoa(dizer_oi))
 print(mensagem_para_pessoa(incentivar_aprender))
 
 """ 
@@ -48,20 +47,17 @@ def calcular(operacoes):
     def div(n1, n2):
         return n1 / n2
     
-    if operacoes == "+":
-        return soma
-    
-    elif operacoes == "-":
-        return sub
-    
-    elif operacoes == "*":
-        return mul
-    
-    elif operacoes == "/":
-        return div
-    
-    else:
-        print("Operação inválida!")
+    match operacoes:
+        case "+":
+            return soma
+        case "-":
+            return sub
+        case "*":
+            return mul
+        case "/":
+            return div
+        case "":
+            return f"Operação inválida!"
 
 resultado = calcular("/")(1, 3)
 print(resultado)
