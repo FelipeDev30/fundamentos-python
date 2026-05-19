@@ -23,6 +23,7 @@ minha_funcao = decorador(minha_funcao)
 
 # Exemplo simples: um decorador que imprime uma mensagem antes e depois da função
 
+"""
 def meu_decorador(funcao):
     def wrapper():
         print("Antes da função")
@@ -32,9 +33,11 @@ def meu_decorador(funcao):
 
 @meu_decorador
 def saudacao():
-    print("Olá!")
+    print("Olá, mundo!")
 
+saudacao = meu_decorador(saudacao)
 saudacao()
+
 
 # Outro exemplo:
 
@@ -51,5 +54,3 @@ def falar(texto):
     print(texto)
 
 falar("Oi!")
-
-"""
