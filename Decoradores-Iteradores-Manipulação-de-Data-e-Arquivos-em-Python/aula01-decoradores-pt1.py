@@ -35,7 +35,6 @@ def meu_decorador(funcao):
 def saudacao():
     print("Olá, mundo!")
 
-saudacao = meu_decorador(saudacao)
 saudacao()
 
 
