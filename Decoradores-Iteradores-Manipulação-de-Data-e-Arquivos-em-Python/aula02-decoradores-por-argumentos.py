@@ -1,26 +1,17 @@
 def meu_decorador(funcao):
-    def wrapper(*args, **kwargs):
-        return funcao(*args, **kwargs)
-    return wrapper
+    def funcao_decorada(*args, **kwargs):
+        print("Antes da função ser chamada.")
+        resultado = funcao(*args, **kwargs)
+        print("Depois da função ser chamada.")
+        return resultado
+    return funcao_decorada
 
 @meu_decorador
-def saudacao(nome="", idade=0):
-    nome = input("Digite seu nome: ")
-    idade = int(input("Digite sua idade: "))
-    print(f"Olá, {nome}! Você tem {idade} anos.")
+def ola_mundo(nome = ""):
+    if not nome:
+        nome = input("Digite seu nome: ")
+    print(f"Olá, {nome.upper()}! Bem-vindo ao mundo dos decoradores!")
+    return nome
 
-saudacao()
+ola_mundo()
 
-def duplicar(func):
-    def wrapper(*args, **kwargs):
-        func(*args, **kwargs)
-        return func(*args, **kwargs)
-    return wrapper
-
-@duplicar
-def aprender(tecnologia):
-    print(f"Estou aprendendo {tecnologia}!")
-    return tecnologia.upper()
-
-tecnologia = aprender("Python")
-print(tecnologia)
