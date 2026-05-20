@@ -1,3 +1,13 @@
+""" 
+# Decoradores por Argumentos
+
+Decoradores por argumentos são uma extensão dos decoradores tradicionais, permitindo que você passe argumentos para o decorador. 
+Isso é útil quando você deseja personalizar o comportamento do decorador com base em parâmetros específicos.
+A estrutura básica de um decorador por argumentos envolve uma função que retorna um decorador, que por sua vez retorna a função decorada.
+
+Aqui está um exemplo de um decorador por argumentos que personaliza a mensagem exibida antes e depois da execução de uma função:
+
+"""
 def meu_decorador(funcao):
     def funcao_decorada(*args, **kwargs):
         print("Antes da função ser chamada.")
