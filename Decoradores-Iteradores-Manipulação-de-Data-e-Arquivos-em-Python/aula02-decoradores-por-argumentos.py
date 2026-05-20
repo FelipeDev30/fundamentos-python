@@ -15,3 +15,17 @@ def ola_mundo(nome = ""):
 
 ola_mundo()
 
+print("\n" + "-"*50 + "\n")
+
+def duplicar(func):
+    def wrapper(*args, **kwargs):
+        func(*args, **kwargs)
+        func(*args, **kwargs)
+    
+    return wrapper
+
+@duplicar
+def aprender(tecnologia):
+    print(f"Estou aprendendo {tecnologia}!")
+    
+aprender("Python")
